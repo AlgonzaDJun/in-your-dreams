@@ -1,0 +1,130 @@
+.customContainer {
+  width: 100%;
+}
+
+/* @media min width 768px customContainer width 50% */
+@media only screen and (min-width: 768px) {
+  .customContainer {
+    width: 50%;
+  }
+}
+
+.chatbox {
+  height: 500px;
+  min-height: 500px;
+  overflow-y: scroll;
+  border: 1px solid #dfdede;
+  padding: 10px;
+}
+
+.usernameis {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333333;
+  text-decoration: underline;
+}
+
+.usermessageis {
+  background: #5187ff;
+  color: #ffffff;
+  padding: 5px 10px 5px 10px;
+  font-size: 20px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  width: fit-content;
+}
+
+.message-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.sender-message {
+  background-color: #5187ff;
+  color: #ffffff;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding: 5px 10px 5px 10px;
+  font-size: 20px;
+  align-self: flex-end;
+  margin-left: 10px;
+}
+
+.receiver-message {
+  background-color: #efefef;
+  color: #333333;
+  border-top-left-radius: 6px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding: 5px 10px 5px 10px;
+  font-size: 20px;
+  align-self: flex-start;
+  margin-right: 10px;
+}
+
+.preview-image-container {
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: calc(100% - 1px);
+  width: 73%;
+  float: left;
+  margin-right: -100%;
+  /* height: 100%;
+    width: 100%;
+    position: absolute; */
+  bottom: 0;
+  /* left: 0; */
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: block;
+  border-radius: 5px;
+}
+
+.preview-image {
+  border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  /* background-color: rgba(0, 0, 0, 0.4); */
+  /* position: sticky; */
+  width: 459px;
+  height: 0;
+  padding-top: 72%;
+  /* asumsi aspek rasio gambar adalah 4:3 */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+@media only screen and (max-width: 768px) {
+  .preview-image-container {
+    width: calc(100% - 1px);
+  }
+
+  .preview-image {
+    left: 50%;
+    height: 100%;
+    width: 315px;
+    padding-top: 57%;
+  }
+}
+
+.close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
